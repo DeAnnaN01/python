@@ -1,14 +1,12 @@
 # ing_ly_string.py
 # written by DeAnna
-
+#grepper Adding 'ing' or 'ly' to the end of a string
 from tomlkit import string
 
 # declaring variables
 given_result = string(' ')
 
 # name of function
-
-
 def inglyString():
 
     # user given input string
@@ -28,3 +26,4 @@ def inglyString():
 
 # This is where the function is called.
 inglyString()
+#end grepper
