@@ -6,7 +6,7 @@
 ## Take pdf apart page at a time, read it, send text to 'text to speech', then repeat for each page of pdf file. 
 
 import PyPDF2
-pdfReader = PyPDF2.PdfFileReader(open('file.pdf, rb'))
+pdfReader = PyPDF2.PdfFileReader(open('file.pdf', mode='r+b'))
 import pyttsx3
 speaker = pyttsx3.init()
 
@@ -14,7 +14,7 @@ speaker = pyttsx3.init()
 ## This will repeat for each page. 
 
 for page_num in range(pdfReader.numPages):
-    text = pfdReader.getPage(page_num).extractText()
+    text = pdfReader.getPage(page_num).extractText()
     speaker.say(text)
     speaker.runAndWait()
 speaker.stop()
